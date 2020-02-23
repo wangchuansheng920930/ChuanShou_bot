@@ -14,16 +14,6 @@ async def on_ready():
     channel = bot.get_channel(int(jdata['main_channel']))
     await channel.send(f'>> 傳說機器人運行中 <<')
 
-@bot.event
-async def on_member_join(member):
-    channel = bot.get_channel(int(jdata['main_channel']))
-    await channel.send(f'{member} 已加入此伺服器!')
-
-@bot.event
-async def on_member_remove(member):
-    channel = bot.get_channel(int(jdata['main_channel']))
-    await channel.send(f'{member} 已離開此伺服器!')
-
 @bot.command()
 async def load(ctx, extension):
     bot.load_extension(f'cmds.{extension}')
