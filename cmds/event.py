@@ -22,7 +22,7 @@ class Event(Cog_Extension):
     async def on_message(self, msg):
         keyword = ['作者', '機器']
         if msg.content in keyword and msg.author != self.bot.user:
-            await msg.channel.send('本機器作者:傳說\nDC名稱:􂤁􀅉􂤁𝓒𝓱𝓾𝓪𝓷𝓢𝓱𝓸𝓾􂤁􀅉􂤁\n帳號編號:#1488\n好友搜尋:􂤁􀅉􂤁𝓒𝓱𝓾𝓪𝓷𝓢𝓱𝓸𝓾􂤁􀅉􂤁#1488')
+            await msg.channel.send('機器作者:傳說\nDC名稱:􂤁􀅉􂤁𝓒𝓱𝓾𝓪𝓷𝓢𝓱𝓸𝓾􂤁􀅉􂤁\n帳號編號:#1488\n好友搜尋:􂤁􀅉􂤁𝓒𝓱𝓾𝓪𝓷𝓢𝓱𝓸𝓾􂤁􀅉􂤁#1488')
 
 def setup(bot):
     bot.add_cog(Event(bot))
