@@ -6,6 +6,15 @@ class Main(Cog_Extension):
 
 
     @commands.command()
+    async def sy(self, ctx, *,msg):
+        await ctx.message.delete()
+        await ctx.send(msg)
+
+    @commands.command()
+    async def un(self, ctx, num: int):
+        await ctx.channel.purge(limit=num+1)
+    
+    @commands.command()
     async def sp(self, ctx):
         await ctx.send(f'{self.bot.latency} (s)')
 
@@ -29,6 +38,8 @@ class Main(Cog_Extension):
         embed.add_field(name="販售項目2", value="DiscordBOT 防/翻", inline=True)
         embed.set_footer(text="購買私Line LineID:wang651215")
         await ctx.send(embed=embed)
+
+    
 
 def setup(bot):
     bot.add_cog(Main(bot))
